@@ -24,3 +24,5 @@ function getSumOfHouses(newArr) {
 }
 
 console.log(getSumOfHouses(arrHouses));
+
+//пересмотреть решение
