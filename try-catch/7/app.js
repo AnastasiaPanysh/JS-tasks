@@ -9,6 +9,7 @@ const num = '9119'.split('')
 function checkNum(newNum) {
     const newArr = newNum.filter(el => !isNaN(el))
     if (!newArr.length) throw new Error('not a number')
+    return true
 }
 
 function doNumberSquared(newNum) {
