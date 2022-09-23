@@ -7,7 +7,7 @@ const password = 'asdFG$5lk';
 
 function checkPassword(newPassword) {
      try {
-        if (!/[a-zA-Z0-9_\-\.!@#$&*].{8}$/g.test(newPassword)) throw new error('не надежный пароль')
+        if (!/[a-zA-Z0-9_\-\.!@#$&*].{8,}$/g.test(newPassword)) throw new error('не надежный пароль')
         return newPassword
      } catch (error) {
           return error.message

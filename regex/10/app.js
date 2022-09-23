@@ -5,14 +5,16 @@
 // <!-- -->
 
 
-const comment = 'const a = 14 <!--ADD SMTH-->';
+const string = 'const a = 14 <!--ADD SMTH-->';
 
-function deleteComments(newComment) {
+function deleteComments(newString) {
      try {
-        if (!/<!--(.*?)-->/g.test(newComment)) 
-     
+          let strWithoutComments = newString.replace(/<!--[a-zA-Z0-9\.!@#$&*]+$-->/g, '');
+          if (strWithoutComments.length === string.length) throw new Error('there no comments');
+          return newFile;
      } catch (error) {
-          return error.message
+          return error.message;
      }
 }
-console.log(deleteComments(comment));
+console.log(deleteComments(string));
+//не работает
