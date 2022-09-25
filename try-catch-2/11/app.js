@@ -8,11 +8,13 @@ const str = 'rkqodlw'.split('').sort().join();
 const word = 'world'.split('').sort().join();
 
 function checkWord(str, word) {
-    if (str.includes(word)) {
-        return true
-    } else {
-        false
+    let wordLength = 0
+    for (let i = 0; i < word.length; i++) {
+        if (str.includes(word[i])) {
+            wordLength++
+        }
     }
+    if (wordLength === word.length) true
+    else false
 }
 console.log(checkWord(str, word));
-не работает
