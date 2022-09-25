@@ -8,8 +8,11 @@
 // 49 –> true 
 
 function checkNum(num) {
-
-    if (Number.isInteger(Math.sqrt(num))) return true
-    else return false
+    try {
+        if (Number.isInteger(Math.sqrt(num))) return true
+        else throw new Error('не идеальный квадрат')
+    } catch (error) {
+        return error.message
+    }
 }
 console.log(checkNum(255));

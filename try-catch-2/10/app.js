@@ -13,7 +13,6 @@ function checkStr(str) {
           if (str.length % 2 == 0) {
                for (let i = 0; i < str.length; i + 2) {
                     if (str[i] === str[i + 1]) return true
-                    else return false
                }
           } else throw new Error('doesn\'t contain a pair')
      } catch (error) {
