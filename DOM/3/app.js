@@ -1,22 +1,22 @@
 const btn = document.querySelector('.btn');
+let arr = [];
 
-function isValid(valueInput) {
-    if (!valueInput) throw new Error('input is empty');
-    if (!/^\+[0-9]{3}\([0-9]{2}\)[0-9]{3}-[0-9]{2}-[0-9]{2}/g.test(value)) throw new Error('incorrect format');
-    return true
+function checkVal(input) {
+    if (!input.value) throw new Error('error')
+    if (isNaN(input.value)) throw new Error('not a number')
 }
 
 btn.addEventListener('click', () => {
-    let input = document.querySelector('.inp');
+    let input = document.querySelector('.input');
     try {
-        if (isValid(input.value)) {
-            input.style = 'border: 1px solid black'
-            alert(input.value);
-            input.value = '';
-        }
+        checkVal(input)
+        arr.push(input.value);
+        document.querySelector('.res').innerHTML = `вы ввели: ${arr}`;
+        input.value = ''
+        input.style = "border: 1px solid black"
     } catch (error) {
-        input.style = 'border: 1px solid red'
-        alert(error.message);
-        input.value = '';
+        alert(error.message)
+        input.value = ''
+        input.style = "border: 1px solid red"
     }
-});
+})

@@ -1,22 +1,17 @@
-const btn = document.querySelector('.btn');
-let arr = [];
+// Необходимо отобразить кнопку с надписью «Нажми на меня» и пустой инпут. По клику на кнопку вызвать alert и отобразить сообщение из значения инпута. Проверки на ввод. Обработать ошибки
 
-function checkVal(input) {
-    if (!input.value) throw new Error('error')
-    if (isNaN(input.value)) throw new Error('not a number')
-}
+const btn = document.querySelector('.btn');
+
+function checkValue(input) {
+    if (!input.value) throw new Error('error');
+ }
 
 btn.addEventListener('click', () => {
     let input = document.querySelector('.input');
     try {
-        checkVal(input)
-        arr.push(input.value);
-        document.querySelector('.res').innerHTML = `вы ввели: ${arr}`;
-        input.value = ''
-        input.style = "border: 1px solid black"
+        checkValue(input)
+        alert(input.value)
     } catch (error) {
         alert(error.message)
-        input.value = ''
-        input.style = "border: 1px solid red"
     }
 })
