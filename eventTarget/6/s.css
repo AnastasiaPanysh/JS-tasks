@@ -1,0 +1,8 @@
+.picture1 {
+    background-image: url(./img/image1.png);
+    width: 350px;
+    height: 400px;
+    margin-left: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
