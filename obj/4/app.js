@@ -17,4 +17,3 @@ btn.addEventListener('click', () => {
     let res = Object.keys(obj).filter(elem => elem % 2 === 0)
     console.log(res);
 })
-
