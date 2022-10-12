@@ -11,7 +11,5 @@
         for( let i =0; i<input; i++){
           obj[ Math.floor(Math.random()*100)] = Math.floor(Math.random()*100);
           document.querySelector('.res').innerHTML = JSON.stringify(obj);
-        //   input = ''
-
         }
     })
