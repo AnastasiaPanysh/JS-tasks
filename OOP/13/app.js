@@ -18,32 +18,31 @@
 // {"id": "javascript", "label": "JavaScript", "category": "programmingLanguages", "priority": 1}
 // Если совпадение есть – ошибка. Добавить проверки 
 
-class ServerPost {
-    middleware(parsedData) {
-        if (typeof parsedData.id !== 'string') throw new Error('label is not a string')
-    }
 
+class ServerPost {
+
+    middleware(obj) {
+       if (!obj.hasOwnProperty('id')) throw new Error('Нет id')
+    }
     controller(obj) {
         try {
-            const parsedData = JSON.parse(obj);
-            this.middleware(parsedData)
-            const gotData = this.service(parsedData);
-            return gotData;
+            const objParsed = JSON.parse(obj);
+            this.middleware(objParsed);
+            const arrDB = this.service(objParsed);
+            return arrDB
         } catch (error) {
-            return error.message;
+            return (error.message)
         }
     }
 
-
-    service(parsedData) {
-        const gotData = this.repository(parsedData);
-        if (!gotData.length) throw new Error('array has this element');
-       const newData = gotData.push(parsedData)
-       return newData
+    service(obj) {
+        const arrDB = this.repository(obj);
+        if (!arrDB.length) throw new Error('массив пуст')
+        return arrDB
     }
 
-    repository(parsedDataClient) {
-        const arr = `[
+    repository(obj) {
+        let arrDB  = `[
             { "id": "javascript", "label": "JavaScript", "category": "programmingLanguages", "priority": 1 },
             { "id": "typescript", "label": "TypeScript", "category": "programmingLanguages", "priority": 1 },
             { "id": "sql", "label": "SQL", "category": "programmingLanguages", "priority": 2 },
@@ -51,15 +50,15 @@ class ServerPost {
             { "id": "go", "label": "GO", "category": "programmingLanguages", "priority": 3 }
             ]`;
 
-        const parseDB = JSON.parse(arr);
-        const found = parseDB.filter(el => el.id === parsedDataClient.label);
-        return found
+        const parseDB = JSON.parse(arrDB);
+        const filtered = parseDB.some(el => el.label !== obj.label);
+        if (filtered) throw new Error('db has such label');
+        parseDB.push(obj)
+        return parseDB
     }
-
 }
 
-const serverPost = new ServerPost();
-console.log(serverPost.controller(`{"id": "javascript", "label": "JavaZA", "category": "programmingLanguages", "priority": 1}`));
+const serverPost = new ServerPost()
+console.log(serverPost.controller(`{"id": "javascript", "label": "JavaScript", "category": "programmingLanguages", "priority": 1}`));
 
-
-//ОШИБКА!!! 
+//в чём ошибка? 
