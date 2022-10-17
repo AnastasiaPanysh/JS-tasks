@@ -61,4 +61,3 @@ class ServerPost {
 const serverPost = new ServerPost()
 console.log(serverPost.controller(`{"id": "javascript", "label": "JavaScript", "category": "programmingLanguages", "priority": 1}`));
 
-//в чём ошибка? 
