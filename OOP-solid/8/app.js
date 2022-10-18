@@ -15,7 +15,7 @@ class DomHtml {
             this.middleware(value)
         })
     }
-    
+
     middleware(value) {
         try {
             if (!/^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$/g.test(value)) throw new Error('ошибка при вводе uuid')
