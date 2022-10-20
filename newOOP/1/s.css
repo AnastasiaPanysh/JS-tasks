@@ -1,0 +1,6 @@
+.res{
+    height: 400px;
+    width: 300px;
+    overflow-y: scroll;
+    background-color: aliceblue;
+}
