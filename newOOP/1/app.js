@@ -29,11 +29,44 @@ class Singer extends Worker {
         console.log(this.name, this.surname, this.years, this.birth, this.style);
     }
 }
-const worker= new Worker('Hanna', 22)
+const worker = new Worker('Hanna', 22)
 singer.getMoreInfo()
 
-const singer= new Singer('Nastya', 'Panysh', 21,'27/11/00','rock')
+const singer = new Singer('Nastya', 'Panysh', 21, '27/11/00', 'rock')
 singer.getMoreInfo()
 
 
 
+
+
+// function sum() {
+//     let sum = 0;
+//     return () => {
+//         return ++sum
+//     }
+// }
+// const wrapper = sum()
+// console.log(wrapper());
+
+
+// class Sum{
+//     sum=0;
+//     count(){
+//         return ++this.sum
+//     }
+// }
+
+// const sum = new Sum();
+// console.log(sum.count());
+// console.log(sum.count());
+// console.log(sum.count());
+
+
+const obj={
+    count: 0,
+    sum:function(){
+        return ++this.count 
+    }
+}
+
+console.log(obj.sum());
