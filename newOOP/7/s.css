@@ -1,0 +1,6 @@
+#i1{background: pink; color: pink !important;}
+#i2{background: yellow;}
+.a1 a3{background: blue; color: green;}
+.a2 .a3 {color: blue;}
+.a1 .a2 .a3 {background: black;}
+.a2{background: red;}

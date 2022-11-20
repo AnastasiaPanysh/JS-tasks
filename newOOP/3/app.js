@@ -18,29 +18,45 @@
 // html.renderArr()
 
 
-//ДИНАМИЧНО
+// //ДИНАМИЧНО
 
-class Html {
+// class Html {
 
-    constructor(str) {
-        this.str = str
-        this.doArray()
-    }
+//     constructor(str) {
+//         this.str = str
+//         this.doArray()
+//     }
 
-    doArray() {
-        document.querySelector('.btn').addEventListener('click', () => {
-            const input = +document.querySelector('input').value
-            let arr = [];
-            for (let i = 0; i < input; i++) {
-                arr.push(Math.floor(Math.random()*10))
-            }
-            this.renderArr(arr);
-        })
-    }
+//     doArray() {
+//         document.querySelector('.btn').addEventListener('click', () => {
+//             const input = +document.querySelector('input').value
+//             let arr = [];
+//             for (let i = 0; i < input; i++) {
+//                 arr.push(Math.floor(Math.random()*10))
+//             }
+//             this.renderArr(arr);
+//         })
+//     }
 
-    renderArr(arr) {
-        document.querySelector(this.str).textContent = arr
+//     renderArr(arr) {
+//         document.querySelector(this.str).textContent = arr
+//     }
+// }
+
+// const html = new Html('.res');
+
+
+class Rec {
+    sumRes = 0
+    sum(n) {
+        this.sumRes += n
+        console.log(this.sumRes);
     }
 }
 
-const html = new Html('.res');
+const rec = new Rec()
+
+rec.sum(2)
+rec.sum(3)
+rec.sum(4)
+rec.sum(5)
