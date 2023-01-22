@@ -410,3 +410,27 @@
 сумму всех вершин*/
 
 /*18. Дан массив с объектами даты. Необходимо отсортировать по датам.*/
+
+interface iDate {
+    date: string
+}
+
+const arr: iDate[] = [
+    { date: '10.01.2017' },
+    { date: '05.11.2016' },
+    { date: '21.12.2002' }
+]
+
+function doSort(arr: iDate[]): iDate[] {
+    for (let i = 0; i < arr.length - 1; i++) {
+        // for (let j = arr.length - 1; j > 0; j--) {
+
+            let dateDay = arr[i].date.replaceAll(".", "").split(" ")
+
+
+        }
+
+        return
+
+    }
+    console.log(doSort(arr));
