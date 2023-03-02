@@ -15,6 +15,7 @@ import Task13 from './pages/Task13';
 import Task14 from './pages/Task14';
 import Task15 from './pages/Task15';
 import Task16 from './pages/Task16';
+import Task17 from './pages/Task17';
 
 function App() {
   return (
@@ -50,6 +51,8 @@ function App() {
    <Task15></Task15>
    <hr></hr>
    <Task16></Task16>
+   <hr></hr>
+   <Task17></Task17>
    </>
   );
 }
