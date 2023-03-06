@@ -1,26 +1,26 @@
 
-import Task1 from './pages/Task1';
-import Task2 from './pages/Task2';
-import Task3 from './pages/Task3';
-import Task4 from './pages/Task4';
-import Task5 from './pages/Task5';
-import Task6 from './pages/Task6';
-import Task7 from './pages/Task7';
-import Task8 from './pages/Task8';
-import Task9 from './pages/Task9';
-import Task10 from './pages/Task10';
-import Task11 from './pages/Task11';
-import Task12 from './pages/Task12';
-import Task13 from './pages/Task13';
-import Task14 from './pages/Task14';
-import Task15 from './pages/Task15';
-import Task16 from './pages/Task16';
+// import Task1 from './pages/Task1';
+// import Task2 from './pages/Task2';
+// import Task3 from './pages/Task3';
+// import Task4 from './pages/Task4';
+// import Task5 from './pages/Task5';
+// import Task6 from './pages/Task6';
+// import Task7 from './pages/Task7';
+// import Task8 from './pages/Task8';
+// import Task9 from './pages/Task9';
+// import Task10 from './pages/Task10';
+// import Task11 from './pages/Task11';
+// import Task12 from './pages/Task12';
+// import Task13 from './pages/Task13';
+// import Task14 from './pages/Task14';
+// import Task15 from './pages/Task15';
+// import Task16 from './pages/Task16';
 import Task17 from './pages/Task17';
 
 function App() {
   return (
     <>
-   <Task1></Task1>
+   {/* <Task1></Task1>
    <hr></hr>
    <Task2></Task2>
    <hr></hr>
@@ -51,7 +51,7 @@ function App() {
    <Task15></Task15>
    <hr></hr>
    <Task16></Task16>
-   <hr></hr>
+   <hr></hr> */}
    <Task17></Task17>
    </>
   );
