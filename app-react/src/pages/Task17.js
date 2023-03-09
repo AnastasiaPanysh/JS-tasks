@@ -11,6 +11,7 @@ function Task17() {
     function showContent(content) {
         if (content === 'About') return <p>{content}</p>
         else if (content === 'Blog') return <p>{content}</p>
+        
         else if (content === 'Programm') return <p>{content}</p>
     }
 

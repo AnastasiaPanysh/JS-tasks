@@ -15,12 +15,17 @@
 // import Task14 from './pages/Task14';
 // import Task15 from './pages/Task15';
 // import Task16 from './pages/Task16';
-import Task17 from './pages/Task17';
+// import Task17 from './pages/Task17';
+import Task18 from './pages/Task18';
+import Task19 from './pages/Task19';
+import Task20 from './pages/Task20';
+import Task21 from './pages/Task21';
+import Task22 from './pages/Task22/Task22'
 
 function App() {
   return (
     <>
-   {/* <Task1></Task1>
+      {/* <Task1></Task1>
    <hr></hr>
    <Task2></Task2>
    <hr></hr>
@@ -51,9 +56,22 @@ function App() {
    <Task15></Task15>
    <hr></hr>
    <Task16></Task16>
-   <hr></hr> */}
+   <hr></hr> 
    <Task17></Task17>
-   </>
+  <hr></hr>  */}
+
+      <Task18></Task18>
+      <hr></hr>
+      <Task19></Task19>
+      <hr></hr>
+      <Task20></Task20>
+      <hr></hr>
+      <Task21></Task21>
+      <hr></hr>
+      <Task22></Task22>
+
+
+    </>
   );
 }
 
